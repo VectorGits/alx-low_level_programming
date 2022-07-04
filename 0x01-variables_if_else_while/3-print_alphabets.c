@@ -15,7 +15,6 @@ int main(void)
 		putchar(leet);
 	for (leet = 'A'; leet <= 'Z'; leet++)
 		putchar(leet);
-
 	putchar('\n');
 
 	return (0);
