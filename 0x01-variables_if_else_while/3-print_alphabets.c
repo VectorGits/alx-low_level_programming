@@ -11,7 +11,7 @@ int main(void)
 {
 	char leet;
 
-	for (leet = 'a'; leet <= 'a'; leet++)
+	for (leet = 'a'; leet <= 'z'; leet++)
 		putchar(leet);
 	for (leet = 'A'; leet <= 'Z'; leet++)
 		putchar(leet);
