@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - check description
+ * print_alphabet_x10 - The description is down below Betty!!
  * Description: Prints inputted lowercase alphabets 10 times.
- * 
  * Return: Always 0 (Success)
  */
 
