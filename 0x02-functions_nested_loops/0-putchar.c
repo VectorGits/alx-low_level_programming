@@ -1,13 +1,21 @@
 #include <unistd.h>
+#include "holberton.h"
 
 /**
- * This script prints _putchar followed by a new line
+ * main - Check description
+ * Description: It prints _putchar, followed by a new line.
  *
- * Return: On success - 1.
- * On error, -1 is returned.
+ * Return: 0.
  */
 
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+	char word[8] = "_putchar";
+	int i;
+
+	for (i = 0; i < 9; i++)
+		_putchar(word[i]);
+	-putchar('\n');
+
+	return (0);
 }
