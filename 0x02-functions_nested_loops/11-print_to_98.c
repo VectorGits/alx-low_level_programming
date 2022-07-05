@@ -3,6 +3,8 @@
 /**
  * print_to_98 - Prints all natural numbers from n to 98
  *
+ * @n: as int
+ *
  * Return: Always void
  */
 
@@ -23,4 +25,4 @@ void print_to_98(int n)
 		}
 	}
 	printf("%d\n", n);
-}
+g

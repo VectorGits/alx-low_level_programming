@@ -3,10 +3,14 @@
 /**
  * add - Adds two integers
  *
+ * @a: The first integer
+ *
+ * @b: The second integer
+ *
  * Return: result
  */
 
-int add(int black, int white)
+int add(int a, int b)
 {
-	return (black + white);
+	return (a + b);
 }
