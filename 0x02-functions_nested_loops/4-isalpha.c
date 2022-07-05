@@ -3,6 +3,8 @@
 /**
  * _isalpha - Check for any kinda alphabet
  *
+ * @c: ASCII code
+ *
  * Return: 1 if true, 0 if false
  */
 
