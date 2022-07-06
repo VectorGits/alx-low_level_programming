@@ -2,8 +2,7 @@
 
 /**
  * main - test function that prints if int is +ve or -ve
- *
- * Return: Should be 0
+ * Return: 0
  */
 
 int main(void)
