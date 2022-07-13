@@ -2,12 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_array - print n elements
+ * print_array - print n elment
  * @a: array
  * @n: elements
  * Return: void
  */
-
 void print_array(int *a, int n)
 {
 	int j = 0;
@@ -18,5 +17,5 @@ void print_array(int *a, int n)
 		if (j != (n - 1))
 			printf(", ");
 	}
-	printf('\n');
+	printf("\n");
 }
