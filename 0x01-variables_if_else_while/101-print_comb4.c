@@ -1,31 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
 /**
- * main - Entry point
+ * main - program that prints all possible different combinations
+ * of thress digits.
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
-
 int main(void)
 {
-	int d, p, q;
+	int i;
+	int n;
+	int j;
 
-	for (d = 48; d < 58; d++)
+	for (i = 48; i < 58; i++)
 	{
-		for (p = 48; p < 58; p++)
+		for (n = 48; n < 58; n++)
 		{
-			if (p > d)
+			if (n > i)
 			{
-				for (q = 48; q < 58; q++)
+				for (j = 48; j < 58; j++)
 				{
-					if (q > p)
+					if (j > n)
 					{
-					putchar(d);
-					putchar(p);
-					putchar(q);
-					if (d == 55 & p == 56 & q == 57)
+					putchar(i);
+					putchar(n);
+					putchar(j);
+					if (i == 55 && n == 56 && j == 57)
 					{
 						break;
 					}
