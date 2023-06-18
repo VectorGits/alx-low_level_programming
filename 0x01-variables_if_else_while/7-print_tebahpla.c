@@ -10,10 +10,10 @@
 
 int main(void)
 {
-	char leet;
+	char l;
 
-	for (leet = 'z'; leet >= 'a'; leet--)
-		putchar(leet);
+	for (l = 'z'; l >= 'a'; l--)
+		putchar(l);
 	putchar('\n');
 	return (0);
 }
