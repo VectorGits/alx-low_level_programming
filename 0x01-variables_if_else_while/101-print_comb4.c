@@ -22,20 +22,22 @@ int main(void)
 				{
 					if (q > p)
 					{
-						putchar(d);
-						putchar(p);
-						putchar(q);
-						if (d != 55 || p != 56 || q != 57)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					putchar(d);
+					putchar(p);
+					putchar(q);
+					if (d == 55 & p == 56 & q == 57)
+					{
+						break;
+					}
+
+					putchar(',');
+					putchar(' ');
 					}
 				}
 			}
 		}
 	}
-	putchar('\n');
 
+	putchar('\n');
 	return (0);
 }
