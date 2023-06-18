@@ -12,23 +12,25 @@ int main(void)
 {
 	int d, p, q;
 
-	for (d = '0'; d < '9'; d++)
+	for (d = 48; d < 58; d++)
 	{
-		for (p = d + 1; p <= '9'; q++)
+		for (p = 48; p < 58; p++)
 		{
-			for (q = p + 1; q <= '9'; q++)
+			if (p > d)
 			{
-				if ((p != d) != q)
+				for (q = 48; q < 58; q++)
 				{
-					putchar(d);
-					putchar(p);
-					putchar(q);
-
-					if (d == '7' && p == '8')
-						continue;
-
-					putchar(',');
-					putchar(' ');
+					if (q > p)
+					{
+						putchar(d);
+						putchar(p);
+						putchar(q);
+						if (d != 55 || p != 56 || q != 57)
+						{
+							putchar(',');
+							putchar(' ');
+						}
+					}
 				}
 			}
 		}
