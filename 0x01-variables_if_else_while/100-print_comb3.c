@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	int d, p;
+	int d;
+	int p;
 
 	for (d = 0; d <= 9; d++)
 	{
