@@ -1,40 +1,37 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * print_times_table - n times table.
- * @n: the number defines the table.
+ *main - print first 98 fibonacci
  *
- * Return: no return value
+ *Return: 0 always.
  */
-void print_times_table(int n)
+int main(void)
 {
-	int num, mult, prod;
-
-	if (n >= 0 && n <= 15)
-	{
-		for (num = 0; num <= n; num++)
-		{
-			_putchar('0');
-
-			for (mult = 1; mult <= n; mult++)
-			{
-				_putchar(',');
-				_putchar(' ');
-
-				prod = num * mult;
-
-				if (prod <= 99)
-					_putchar(' ');
-				if (prod <= 9)
-					_putchar(' ');
-
-				if (prod >= 100)
-				{
-					_putchar((prod / 100) + '0');
-					_putchar(((prod / 10)) % 10 + '0');
-				}
-				_putchar((prod % 10) + '0');
-			}
-			_putchar('\n');
-		}
-	}
+unsigned long int a = 1, b = 2, c, k, p, l, o, m, u, d, i;
+c = a + b;
+printf("%lu, %lu, ", a, b);
+d = 3;
+while (d < 89)
+{
+printf("%lu, ", c);
+a = b;
+b = c;
+c = a + b;
+d++;
+}
+l = b / 1000000000;
+o = b % 1000000000;
+m = c / 1000000000;
+u = c % 1000000000;
+for (i = 89; i < 98; i++)
+{
+printf("%lu%lu, ", m, u);
+k = l;
+p = o;
+l = m;
+o = u;
+m = k + l + ((p + o) / 1000000000);
+u = (p + o) % 1000000000;
+}
+printf("%lu%lu\n", m, u);
+return (0);
 }
