@@ -10,19 +10,17 @@
 
 int main(void)
 {
-	int r = 0;
-	int s = 0;
-	time_t t;
+	int pass, sum;
 
-	srand((unsigned int) time(&t));
-	while (s < 2772)
+	srand(time(NULL));
+	sum = 0;
+	while (sum <= 2645)
 	{
-		r = rand() & 128;
-		if ((s + r) > 2772)
-			break;
-		s = s + r;
-		printf("%c", r);
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
 	}
-	printf("%c\n", (2772 - s));
+	printf("%c", 2772 - sum);
+
 	return (0);
 }
