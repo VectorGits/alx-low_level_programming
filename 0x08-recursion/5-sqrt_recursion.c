@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * helperFunction - checks if sqrt of number exists
- * @num: Input number
- * @pSqrt: Possible sqrt of number.
- *
- * Return: sqrt of number ot -1 for error.
- */
+  *helperFunction - checks if sqrt of number exists
+  *@num: number.
+  *@pSqrt: poissible sqrt of number.
+  *
+  *Return: sqrt of number ot -1 for error.
+  */
 int helperFunction(int num, int pSqrt)
 {
 	if ((pSqrt * pSqrt) == num)
@@ -14,10 +14,11 @@ int helperFunction(int num, int pSqrt)
 	}
 	else
 	{
-		if ((pSqrt * pSqrt) == num)
+		if ((pSqrt * pSqrt) > num)
 			return (-1);
 		else
-			return (helperfunction(num, pSqrt + 1));
+			return (helperFunction(num, pSqrt + 1));
+
 	}
 }
 
