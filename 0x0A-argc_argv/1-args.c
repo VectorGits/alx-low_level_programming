@@ -2,14 +2,14 @@
 
 /**
  * main - function that prints the number of args passed into it
- * @argc: argument counter
+ * @args: argument counter
  * @argv: argument vector
  *
  * Return: return 0 (success)
  */
-int main(int argc, char *argv[])
+int main(int args, char *argv[])
 {
-	print("%d\n", argc - 1);
+	print("%d\n", args - 1);
 	(void)argv;
 	return (0);
 }
