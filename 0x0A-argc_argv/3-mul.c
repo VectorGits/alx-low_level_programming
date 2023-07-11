@@ -9,7 +9,7 @@
  * Return: 0;
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int index, mult;
 
@@ -19,7 +19,7 @@ int main (int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	for (index =1; index < argc; index++)
+	for (index = 1; index < argc; index++)
 	{
 		mult *= atoi(argv[index]);
 	}
