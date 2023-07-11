@@ -31,4 +31,16 @@ char *_strdup(char *str)
 
 	nstr = malloc(sizeof(char) * (len + 1));
 
+	/* check for success status of malloc */
+	if (nstr == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		nstr[i] = str[i];
+	}
+	nstr[len] = '\0';
+	return (nstr);
 }
