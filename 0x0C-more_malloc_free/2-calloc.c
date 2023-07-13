@@ -10,7 +10,7 @@
  * Pointer to memory allocated if successful.
  */
 
-void *_calloc(Unsigned int nmemb, insigned int int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p;
 	unsigned int i;
