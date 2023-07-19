@@ -20,7 +20,7 @@ void _print(char *str, int l)
 		if (str[i] != '0')
 			j = 1;
 		if (j || i == l - 1)
-			_putchar(str[i]);
+			putchar(str[i]);
 		i++;
 	}
 
@@ -146,4 +146,4 @@ int main(int argc, char *argv[])
 	}
 	_print(a, ln - 1);
 	return (0);
-}
+g
