@@ -1,7 +1,6 @@
-#include "function_pointers.h"
 
 /**
- * print_name = A function that prints a name
+ * print_name - A function that prints a name
  *
  * @name: The input string
  * @f: The input function to print the name
