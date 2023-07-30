@@ -3,27 +3,27 @@
 /**
  * add_node - adds new node at beginning of list_t
  * @str: A string to store in the list
- * @head: Linked list head
+ * @head: Pointer to first node
  *
- * Return: Head address
+ * Return: The address of the head.
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
-	if (str == NULL)
-		return NULL;
+	list_t *n_node;
+	size_t s;
 
-	list_t *n_node = (list_t *)malloc(sizeof(list_t));
+	n_node = malloc(sizeof(list_t));
 	if (n_node == NULL)
-		return NULL;
+		return (NULL);
 
 	n_node->str = strdup(str);
-	if (n_node->str == NULL)
-	{
-		free(n_node);
-		return NULL;
-	}
 
+	for (s = 0; str[s]; s++);
+
+	n_node->len = s;
 	n_node->next = *head;
-	return (*head);
+	*head = n_node;
+
+	return n_node;
 }
