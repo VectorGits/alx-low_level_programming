@@ -8,9 +8,9 @@
 
 void free_list(list_t *head)
 {
-	list_t *cur = head;
+	list_t *cur;
 
-	while (cur != NULL)
+	while ((cur = head) != NULL)
 	{
 		head = head->next;
 		free(cur->str);
