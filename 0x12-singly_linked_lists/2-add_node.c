@@ -19,11 +19,12 @@ list_t *add_node(list_t **head, const char *str)
 
 	n_node->str = strdup(str);
 
-	for (s = 0; str[s]; s++);
+	for (s = 0; str[s]; s++)
+		;
 
 	n_node->len = s;
 	n_node->next = *head;
 	*head = n_node;
 
-	return n_node;
+	return (n_node);
 }
