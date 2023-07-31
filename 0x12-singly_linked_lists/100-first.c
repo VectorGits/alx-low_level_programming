@@ -5,7 +5,9 @@
  *
  * Return: Nuffin :^)
  */
-void __attribute__ ((constructor)) first()
+void first() __attribute__((constructor));
+
+void first()
 {
 	printf("You're beat! and yet, you must allow");
 	printf(", \nI bore my house upon my back!\n");
