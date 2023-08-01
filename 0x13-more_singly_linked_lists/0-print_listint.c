@@ -12,11 +12,11 @@ size_t print_listint(const listint_t *h)
 	const listint_t *babe = h;
 	size_t count = 0;
 
-	while (size_t != NULL)
+	while (babe != NULL)
 	{
-		printf("%d\n", babe->p);
+		printf("%d\n", babe->n);
 		count = count + 1;
 		babe = babe->next;
 	}
-	return (babe);
+	return (count);
 }
