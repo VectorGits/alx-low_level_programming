@@ -13,3 +13,9 @@ Create a 2D matrix using malloc.
 
 ### 4-free_grid 
 Frees a 2D grid created in alloc_grid.
+
+### 100-argstostr
+Concatenates all arguments in program.
+
+### 101-strtow
+Splits a string into words.
