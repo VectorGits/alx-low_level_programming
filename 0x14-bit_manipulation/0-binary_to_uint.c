@@ -18,8 +18,13 @@ unsigned int binary_to_uint(const char *b)
 	length = 0;
 	while (b[length] != '\0')
 	{
-		if (b[length] != '0' && b[length] != '1')
-			return (0);
 		length++;
+	}
+	for (length--, b_two = 1; length >= 0; length--, b_two = b_two * 2)
+	{
+		if (b[length] != '0' && b[length] != '1')
+		{
+			return (0);
+		}
 	}
 }
