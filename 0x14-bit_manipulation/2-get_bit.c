@@ -4,7 +4,7 @@
  * @n: No to be printed in binary.
  * @index: index of bit value.
  *
- * Return: Value of error or (-1) if error occurs.
+ * Return: Value of index or (-1) if error occurs.
  */
 
 int get_bit(unsigned long int n, unsigned int index)
