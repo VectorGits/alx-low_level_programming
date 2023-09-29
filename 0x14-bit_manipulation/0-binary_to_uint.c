@@ -26,6 +26,11 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
+
+		if (b[length] & 1)
+		{
+			dec += b_two;
+		}
 	}
 	return (dec);
 }
