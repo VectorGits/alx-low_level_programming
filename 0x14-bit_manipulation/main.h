@@ -8,6 +8,4 @@
 unsigned int binary_to_uint(const char *b);
 
 
-
-
-unsigned
+#endif /*MAIN_H*/
