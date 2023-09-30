@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * flip_bits - This func returns the number of flips to change numbers.
- * @n: No to be printed in binary.
- * @index: index of bit value.
+ * @n: First No to calculate bit flips.
+ * @m: Second no to calculate bit flips.
  *
  * Return: Value of index or (-1) if error occurs.
  */
