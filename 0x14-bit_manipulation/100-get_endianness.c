@@ -11,9 +11,12 @@ int get_endianess(void)
 	unsigned int numx = 1;
 	char *numx_ptr = (char *)&numx;
 
-	if (*numx_ptr)
+	if (*numx_ptr == 1)
 	{
 		return (1); /*Lil endian*/
 	}
-	return (0); /*Big endian*/
+	else
+	{
+		return (0); /*Big endian*/
+	}
 }
