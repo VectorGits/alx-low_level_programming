@@ -32,17 +32,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	read_len = read(fn, buf, letters);
-	close(fn);
+	
 	if (read_len == -1)
 	{
 		free(buf);
+		close(fn);
 		return (0);
 	}
 	write_len = write(STDOUT_FILENO, buf, read_len);
 	free(buf);
+	close(fn);
 	if (write_len != read_len)
 	{
 		return (0);
 	}
-	return (write_len);
+	return (read_len);
 }
