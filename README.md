@@ -17,3 +17,7 @@ Introduction to Functions and nested loops in the C programming language.
 ### 0x03-debugging 🦆
 
 This directory focuses on debugging in the C programming language - An essential skill every aspiring or expert programmer must have, along with a rubber duck ;)
+
+### 0x04-more_functions_nested_loops ➰➰
+
+This directory deals with more practice on functions and nested loops in the C programming language
