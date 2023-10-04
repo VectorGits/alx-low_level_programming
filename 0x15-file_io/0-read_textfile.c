@@ -30,25 +30,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
         return (0);
     }
 
-	buf = malloc(sizeof(char) * letters);
-	if (buf == NULL)
-	{
-		close(fn);
-		return (0);
-	}
-	read_len = read(fn, buf, letters);
-	if (read_len == -1)
-	{
-		free(buf);
-		close(fn);
-		return (0);
-	}
-	write_len = write(STDOUT_FILENO, buf, read_len);
-	free(buf);
-	close(fn);
-	if (write_len != read_len)
-	{
-		return (0);
-	}
-	return (read_len);
+    read_len = read(fn, buf, letters);
+    if (read_len == -1)
+    {
+        free(buf);
+        close(fn);
+        return (0);
+    }
+
+    write_len = write(STDOUT_FILENO, buf, read_len);
+    free(buf);
+    close(fn);
+
+    if (write_len != read_len)
+    {
+        return (0);
+    }
+
+    return (read_len);
 }
