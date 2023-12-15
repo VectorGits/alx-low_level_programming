@@ -1,15 +1,16 @@
+#include <string.h>
 #include "main.h"
-#include "string.h"
-/**
-  *_memcpy - function that copies the memory area
-  *@n: bytes from memory
-  *@src: source of size bytes
-  *@dest: memory destination
-  *Return: Success
- */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+/**
+    *_strncat - function that concatenates two strings
+    *@dest: destination character
+    *@src: source character
+    *@n: integer
+    *Return: Return a pointer to the resulting string dest
+*/
+
+char *_strncat(char *dest, char *src, int n)
 {
-	memcpy(dest, src, n);
+	strncat(dest, src, n);
 	return (dest);
 }

@@ -1,13 +1,19 @@
 #include "main.h"
-#include "string.h"
 /**
-    *_strspn - function that gets the length of a prefic substring
-    *@s: substring character
-    *@accept: consist of bytes in the inital segment
-    *Return: success
-    */
+  *_isalpha - checks if for alphabetic character
+  *@c: int used for the function's argument
+  *Description: use the _isalpha function
+  *Return: 1 if c is a letter lowercase or uppercase
+  *0 otherwise
+  */
 
-unsigned int _strspn(char *s, char *accept)
+int _isalpha(int c)
 {
-	return (strspn(s, accept));
+
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		{
+			return (1);
+		}
+		else
+			return (0);
 }
