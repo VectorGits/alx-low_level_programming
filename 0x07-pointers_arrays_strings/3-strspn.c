@@ -24,10 +24,15 @@ unsigned int _strspn(char *s, char *accept)
 				count++;
 				break;
 			}
-			else if (*(a + 1) == '\0')
-			{
-				return (count);
-			}
 		}
+
+		if (!*a)
+		{
+			return (count);
+		}
+
+		s++;
 	}
+
+	return (count);
 }
