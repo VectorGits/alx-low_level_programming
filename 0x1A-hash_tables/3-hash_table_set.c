@@ -1,43 +1,65 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - Function that adds an element to the hash table
- * @ht: Hash table to be updated
- * @key: Key to be added
- * @value: Value to be added
- * Return: 1 if it succeeded, 0 otherwise
+ * add_n_hash - adds a node at the beginning of a hash at a given index
+ *
+ * @head: head of the hash linked list
+ * @key: key of the hash
+ * @value: value to store
+ * Return: head of the hash
  */
-
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
 {
-	unsigned long int index;
-	hash_node_t *new_node, *node;
+	hash_node_t *tmp;
 
-	if (!ht || !key || !*key || !value)
-		return (0);
+	tmp = *head;
 
-	index = key_index((const unsigned char *)key, ht->size);
-	node = ht->array[index];
-
-	while (node)
+	while (tmp != NULL)
 	{
-		if (!strcmp(node->key, key))
+		if (strcmp(key, tmp->key) == 0)
 		{
-			free(node->value);
-			node->value = strdup(value);
-			return (1);
+			free(tmp->value);
+			tmp->value = strdup(value);
+			return (*head);
 		}
-		node = node->next;
+		tmp = tmp->next;
 	}
 
-	new_node = malloc(sizeof(hash_node_t));
-	if (!new_node)
+	tmp = malloc(sizeof(hash_node_t));
+
+	if (tmp == NULL)
+		return (NULL);
+
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
+	tmp->next = *head;
+	*head = tmp;
+
+	return (*head);
+}
+
+/**
+ * hash_table_set - adds a hash (key, value) to a given hash table
+ *
+ * @ht: pointer to the hash table
+ * @key: key of the hash
+ * @value: value to store
+ * Return: 1 if successes, 0 if fails
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	unsigned long int k_index;
+
+	if (ht == NULL)
 		return (0);
 
-	new_node->key = strdup(key);
-	new_node->value = strdup(value);
-	new_node->next = ht->array[index];
-	ht->array[index] = new_node;
+	if (key == NULL || *key == '\0')
+		return (0);
+
+	k_index = key_index((unsigned char *)key, ht->size);
+
+	if (add_n_hash(&(ht->array[k_index]), key, value) == NULL)
+		return (0);
 
 	return (1);
 }
