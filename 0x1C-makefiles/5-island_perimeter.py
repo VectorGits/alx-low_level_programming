@@ -1,5 +1,18 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+"""
+Technical interview type challenge
+"""
+
 def island_perimeter(grid):
+	"""
+	Calculate the perimeter of an island in a grid.
+
+	Args:
+		grid (list): A 2D grid representing the island.
+
+	Returns:
+		int: The perimeter of the island.
+	"""
 	perimeter = 0
 	for x in range(len(grid)):
 		for y in range(len(grid[x])):
