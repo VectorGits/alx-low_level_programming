@@ -3,5 +3,5 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o) #replaces .c files to .o in the SRC var
 NAME = school
 
-all: $(SRC)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
