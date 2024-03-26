@@ -10,7 +10,7 @@
 
 5. If the current cell is land, add 4 to `perimeter`. This is because a land cell contributes up to 4 to the perimeter: one for each of its four sides.
 
-6. Check the cell to the left of the current cell (i.e., `grid[i][j-1])`. If it's within the grid and it's land, subtract 2 from `perimeter`. This is because this cell shares a side with the current cell, so we've overcounted the perimeter by 2.
+6. Check the cell to the left of the current cell (i.e., `grid[i][j-1]`). If it's within the grid and it's land, subtract 2 from `perimeter`. This is because this cell shares a side with the current cell, so we've overcounted the perimeter by 2.
 
 7. Check the cell above the current cell (i.e., `grid[i-1][j]`). If it's within the grid and it's land, subtract 2 from `perimeter` for the same reason.
 
